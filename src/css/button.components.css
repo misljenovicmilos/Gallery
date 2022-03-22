@@ -1,0 +1,9 @@
+.button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+}
+.button--close {
+  background: var(--color-primary-white);
+  border: none;
+}

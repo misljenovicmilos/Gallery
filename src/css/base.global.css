@@ -1,0 +1,22 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-direction {
+}
+.wrapper {
+  width: 1200px;
+}

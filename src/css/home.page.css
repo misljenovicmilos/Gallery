@@ -1,0 +1,133 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: calc(var(--unit) * 10);
+  grid-auto-rows: calc(var(--unit) * 100);
+  grid-auto-flow: dense;
+}
+.header {
+  padding: calc(var(--unit) * 20) 0px;
+  justify-content: space-between;
+}
+.search {
+  position: relative;
+}
+.spin {
+  width: calc(var(--unit) * 50);
+  height: calc(var(--unit) * 50);
+  margin: auto;
+}
+.search__input {
+  border-radius: calc(var(--unit) * 12);
+  padding-left: calc(var(--unit) * 24);
+  outline: none;
+  height: calc(var(--unit) * 19);
+  padding-right: calc(var(--unit) * 12);
+  width: calc(var(--unit) * 125);
+  background: var(--color-primary-white);
+  border: 1px solid var(--color-disable);
+}
+.search__input--label {
+  position: absolute;
+  width: calc(var(--unit) * 12);
+  height: calc(var(--unit) * 12);
+  top: calc(var(--unit) * 4);
+  left: calc(var(--unit) * 7.5);
+}
+.item__large {
+  position: relative;
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+.item__horizontal {
+  position: relative;
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+}
+.item__vertical:hover > img,
+.item__horizontal:hover > img,
+.item__large:hover > img {
+  opacity: 0.7;
+}
+.item__vertical {
+  position: relative;
+  grid-row-end: span 2;
+  grid-column-end: span 1;
+  grid-auto-flow: auto;
+}
+
+img {
+  width: 100%;
+  border-radius: calc(var(--unit) * 3);
+  height: 100%;
+  object-fit: cover;
+}
+.likes {
+  position: relative;
+  width: calc(var(--unit) * 25);
+  height: calc(var(--unit) * 25);
+}
+.heart {
+  width: calc(var(--unit) * 20);
+  height: calc(var(--unit) * 20);
+}
+
+.input {
+  display: none;
+}
+.heart__color {
+  cursor: pointer;
+  position: absolute;
+  width: calc(var(--unit) * 40);
+  height: calc(var(--unit) * 40);
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.likes__number {
+  position: absolute;
+  top: 0px;
+  color: var(--color-primary-white);
+  right: calc(var(--unit) * 3);
+  font-size: calc(var(--unit) * 6);
+  padding: 1.5px calc(var(--unit) * 2.5);
+  border-radius: 50%;
+  background: var(--color-error);
+}
+.modal__arrows {
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+}
+#modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--color-modal);
+}
+.modal__content {
+  margin: calc(var(--unit) * 8);
+  background-color: var(--color-primary-white);
+  width: calc(var(--unit) * 200);
+  border-radius: calc(var(--unit) * 6);
+  position: relative;
+  padding: calc(var(--unit) * 90) calc(var(--unit) * 50);
+}
+.close {
+  color: var(--color-disable);
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: calc(var(--unit) * 6);
+  right: calc(var(--unit) * 6);
+}
+.close__img {
+  width: calc(var(--unit) * 10);
+  height: calc(var(--unit) * 10);
+}
